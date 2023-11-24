@@ -3,28 +3,58 @@
     padding: 0;
 }
 
-body {
+html,body {
     font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
-.color {
-    width: 450px;
-    height: 700px;
-    border-radius: 0 0 50% 50%;
-    margin-left: -60px;
-   background: linear-gradient(  hsl(293, 100%, 63%),hsl(264, 100%, 61%));
-   
+.componentes {
+    display: flex;
+    position: relative;
+}
+
+.container {
+    margin: auto;
+    width: 80%;
+    display: flex;
+    z-index: 2;
+    gap: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.figura {
+    width: 625px;
+    height: 80vh;
+    border-radius: 0 0 22rem 22rem;
+    margin-left: -80px;
+    position: absolute;
+    z-index: 1;
+}
+.figura-1 {
+    background: linear-gradient(  hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+    top: 0;
+    left: -40px;
+}
+
+.figura-2 {
+    background-color: hsla(293, 100%, 63%, 0.077);
+    bottom: 0;
+    right: -40px;
+    border-radius: 22rem 22rem 0 0;
 }
 
 .phone {
-    width: 440px;
-    height: auto;
+    max-width: 450px;
     border: 20px solid  white;
     box-shadow: 3px 3px 3px 3px rgb(207, 207, 207);
     border-radius: 50px;
     background-color: hsl(270, 12%, 90%);
-
 }
+
 
 .avatar {
     width: 50px;
@@ -33,7 +63,6 @@ body {
     border: 2px solid white;
     
 }
-
 .contenido {
     width: auto;
  background: linear-gradient( to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
@@ -41,42 +70,37 @@ body {
   
   
 }
-
 .perfil {
     display: flex;
    padding: 1rem;
    
 }
-
 .white {
     margin-left: auto;
     margin-right: auto;
-    width: 150px;
+    width: 200px;
     height: 30px;
     background-color: white;
     border-radius: 0 0 20px 20px;
 }
-
 .name {
-    color: white;   
+    color: white; 
+   font-weight: 300; 
+   margin-bottom: 0.3rem; 
 }
-
 .perfil p {
-    color: white;   
+    color: rgba(255, 255, 255, 0.316); 
+   
 }
-
 .letter {
     margin-left: 1rem;
 }
-
 .flecha {
     margin: 20px;
 }
-
 .puntos {
    margin-left: auto;
 }
-
 .body {
     height: auto;
     width: 50%;
@@ -85,7 +109,6 @@ body {
     background-color:  hsla(266, 67%, 86%, 0.456);
     border-radius: 20px;
 }
-
 .parrafos {
     color: hsl(276, 55%, 52%);
     display: inline-block;
@@ -93,7 +116,6 @@ body {
     mix-blend-mode: multiply;
     position: relative;
 }
-
 .parrafos:before {
     content: '';
     display: block;
@@ -109,14 +131,13 @@ body {
  display: flex;
  justify-content: flex-end;
  gap: 1rem;
+ margin-right: 1rem;
 }
-
 .dog {
     width: 80px;
     height: 80px;
     border-radius: 20px ;
 }
-
 .body-2 {
     width: fit-content ;
     block-size: fit-content;
@@ -129,35 +150,33 @@ body {
     border-radius: 20px;
     box-shadow: 2px 2px 3px 3px rgba(212, 209, 209, 0.566);
 }
-
 .parrafos-2 {
     width: fit-content;
     color: hsl(271, 15%, 43%);
 }
-
 .circle {
     appearance: none;
     visibility: hidden;
+    
    
 }
-
-.label {
+.btn {
     display: flex;
     align-items: center;
     gap: 5px;
     color: white;
+    gap: 1rem;
 }
-
-.label::before {
+.btn::before {
     content: ' ';
     width: 20px;
     height: 20px;
    background-color:transparent ;
-   border: 1px solid rgba(255, 255, 255, 0.19);
+   border: 2px solid rgba(255, 255, 255, 0.19);
    display: block;
    border-radius: 50%;
 }
-.circle:checked + .label::before {
+.circle:checked + .btn::before {
     background-color: white;
 
 
@@ -166,8 +185,69 @@ body {
     width: auto;
     padding: 1rem;
     height: auto;
-    max-width: 50%;
+    max-width: 65%;
     background:linear-gradient(to right,hsl(293, 100%, 63%),hsl(264, 100%, 61%));
     border-radius: 20px;
     display: flex;
+    margin: 1rem;
+    cursor: pointer;
+}
+.numbers {
+    
+  margin-left: auto;
+  color: #fff;
+}
+.type-text{
+  
+    height: 4rem;
+    width: 90%;
+    background-color: white;
+    border-radius: 40px;
+    padding-left: 1.5rem;
+    border: none;
+} 
+.mensaje {
+    margin-bottom: 1rem;
+   display: flex;
+   justify-content: center;
+   position: relative;
+}
+.boton {
+   position: absolute;
+   right: 1rem;
+   top: 50%;
+   transform: translateY(-50%);
+   border-radius: 60% 60%;
+   padding: 5px 10px ;
+   background-color: hsl(271, 36%, 24%);
+   border: none;
+   cursor: pointer;
+   
+}
+.arrow {
+    transform: rotate(180deg);
+}
+.section {
+    display: flex;
+    align-items: center;
+    max-width: 50%;
+    margin-left: 3rem;
+}
+
+
+
+
+.simple {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    color:  hsl(271, 36%, 24%);
+    font-size: 2rem;
+}
+
+.stay {
+    margin-left: 1rem;
+    line-height: 30px;
+    font-size: 18px;
+    color:  hsl(202, 4%, 61%);
+    max-width: 70%;
 }
