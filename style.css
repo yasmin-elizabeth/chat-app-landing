@@ -14,17 +14,24 @@ html,body {
 .componentes {
     display: flex;
     position: relative;
+    font-family:'Rubik', sans-serif; 
 }
 
+
+
 .container {
+
     margin: auto;
-    width: 80%;
+    width: 90%;
     display: flex;
     z-index: 2;
     gap: 2rem;
     margin-top: 5rem;
     margin-bottom: 5rem;
 }
+
+
+
 
 .figura {
     width: 625px;
@@ -36,24 +43,29 @@ html,body {
 }
 .figura-1 {
     background: linear-gradient(  hsl(293, 100%, 63%),hsl(264, 100%, 61%));
-    top: 0;
+    top: -40px;
     left: -40px;
 }
 
 .figura-2 {
     background-color: hsla(293, 100%, 63%, 0.077);
-    bottom: 0;
-    right: -40px;
+    bottom: -40px;
+    right: -205px;
     border-radius: 22rem 22rem 0 0;
 }
 
 .phone {
+   min-width: 450px;
+    margin-left: 20rem;
+    width: 450px;
     max-width: 450px;
     border: 20px solid  white;
     box-shadow: 3px 3px 3px 3px rgb(207, 207, 207);
     border-radius: 50px;
-    background-color: hsl(270, 12%, 90%);
+    background-color: hsl(270, 20%, 96%);
 }
+
+
 
 
 .avatar {
@@ -92,6 +104,9 @@ html,body {
     color: rgba(255, 255, 255, 0.316); 
    
 }
+
+
+
 .letter {
     margin-left: 1rem;
 }
@@ -206,6 +221,8 @@ html,body {
     padding-left: 1.5rem;
     border: none;
 } 
+
+
 .mensaje {
     margin-bottom: 1rem;
    display: flex;
@@ -230,8 +247,9 @@ html,body {
 .section {
     display: flex;
     align-items: center;
-    max-width: 50%;
-    margin-left: 3rem;
+   margin-left: 5rem;
+    
+
 }
 
 
@@ -250,4 +268,154 @@ html,body {
     font-size: 18px;
     color:  hsl(202, 4%, 61%);
     max-width: 70%;
+}
+
+@media screen and (max-width:768px) {
+    .componentes {
+        display: grid;
+        grid-template-columns:  1fr;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .phone {
+        margin-left: 0;
+        min-width: 300px;
+        width: 300px;
+        max-width: 300px;
+        border: 16px solid white;
+
+    }
+
+    .name {
+        font-size: 1.1rem;
+    }
+
+    .perfil p {
+        font-size: 0.9rem;
+    }
+
+    .parrafos {
+        font-size: 14px;
+    }
+
+    .body {
+       width: 64%;
+    }
+
+    .dog {
+        width: 52px;
+        height: 58px;
+        border-radius: 9px;
+    }
+
+    .parrafos-2 {
+        font-size: 14px;
+        
+    }
+
+    .body-2 {
+       display: flex;
+       justify-content: flex-end;
+       max-width: 65%;
+       border-radius: 19px;
+       padding: 10px;
+    }
+
+    .btn {
+        font-size: 15px;
+        
+    }
+
+    .numbers {
+        font-size: 20px;
+    }
+
+    .number {
+        padding: 0.9rem;
+        max-width: 79%;
+    }
+
+    .type-text {
+        height: 3rem;
+        width: 82%;
+    }
+
+    .boton {
+        right: 1.5rem;
+    }
+
+    .simple {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .stay {
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 90%;
+    }
+
+    .section {
+        margin-left: 0;
+    }
+
+    .avatar {
+        width: 30px;
+        height: 30px;
+        border-radius: 50% 50%;
+    }
+
+    .flecha {
+        margin: 8px 20px;
+    }
+
+    .perfil {
+        padding: 10px;
+    }
+
+    .puntos {
+        margin-left: 2rem;
+    }
+
+    .white {
+        height: 24px;
+        width: 180px;
+    }
+
+    .figura-1 {
+        left: -75%;
+    }
+
+    .figura-2 {
+        right: -351px;
+        background-color:  hsla(293, 100%, 63%, 0.219);
+    }
+    
+    
+}
+
+@media screen and (min-width: 500px) and (max-width : 700px){
+    .figura-1 {
+        left: -54%;
+    }
+    
+}
+
+@media screen and (min-width: 600px) and (max-width : 1040px){
+    .phone {
+        min-width: 321px;
+        width: 350px;
+        max-width: 350px;
+    }
+
+    .figura-2 {
+        bottom: -306px;
+    }
+    
+    
 }
