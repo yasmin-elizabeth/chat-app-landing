@@ -48,7 +48,7 @@ html,body {
 }
 
 .figura-2 {
-    background-color: hsla(293, 100%, 63%, 0.077);
+    background-color: hsl(293deg 100% 63% / 14%);
     bottom: -40px;
     right: -205px;
     border-radius: 22rem 22rem 0 0;
@@ -270,7 +270,7 @@ html,body {
     max-width: 70%;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1000px) {
     .componentes {
         display: grid;
         grid-template-columns:  1fr;
@@ -399,23 +399,31 @@ html,body {
     
 }
 
-@media screen and (min-width: 500px) and (max-width : 700px){
-    .figura-1 {
-        left: -54%;
-    }
+@media screen and (min-width:1001px) and (max-width:1280px)  {
+.phone {
+    margin-left: 5rem;
+    min-width: 377px;
+    width:377px;
+    max-width:377px;
     
 }
 
-@media screen and (min-width: 600px) and (max-width : 1040px){
-    .phone {
-        min-width: 321px;
-        width: 350px;
-        max-width: 350px;
-    }
+.figura-1 {
+    left: -175px;
+}
 
-    .figura-2 {
-        bottom: -306px;
-    }
-    
-    
+.section {
+    margin-left: 3rem;
+    margin-top: 12rem;
+    align-items: unset;
+}
+.stay {
+    max-width: 90%;
+}
+
+.figura-2 {
+   height: 75%;
+    right: -330px ;
+}
+
 }
